@@ -1,6 +1,11 @@
 export default function SlideCard({ slide }) {
   return (
-    <div className="bg-white border border-ink/10 rounded-sm overflow-hidden hover:shadow-lg transition-shadow">
+    <a 
+  href={slide.slideUrl} 
+  target="_blank" 
+  rel="noreferrer"
+  className="bg-white border border-ink/10 rounded-sm overflow-hidden hover:shadow-lg transition-shadow block"
+>
       <div className="h-40 bg-ink/5 flex items-center justify-center overflow-hidden">
         {slide.previewImage ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -26,6 +31,6 @@ export default function SlideCard({ slide }) {
           <span>{slide.year || ""}</span>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
